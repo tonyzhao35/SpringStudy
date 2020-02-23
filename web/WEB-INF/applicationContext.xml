@@ -7,6 +7,8 @@
 
     <context:component-scan base-package="com.tutorialspoint.autowired"/>
 
+    <!--<context:annotation-config/>-->
+
     <beans:bean id="sampleBean"
                 class="com.tutorialspoint.autowired.bean.SampleBean"/>
 </beans:beans>

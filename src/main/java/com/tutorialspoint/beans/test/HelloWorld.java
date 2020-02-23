@@ -1,14 +1,11 @@
-package com.tutorialspoint.beans.xml;
-
-import org.springframework.beans.BeansException;
-import org.springframework.beans.factory.DisposableBean;
-import org.springframework.beans.factory.InitializingBean;
-import org.springframework.beans.factory.config.BeanPostProcessor;
+package com.tutorialspoint.beans.test;
 
 public class HelloWorld {
     private String message;
     private String others;
     private HelloChild child;
+    private HelloSon son;
+    private HelloWife wife;
 
     public HelloWorld(HelloChild child, String text) {
         this.child = child;
@@ -17,6 +14,18 @@ public class HelloWorld {
 
     public void sayHello() {
         child.sayHello();
+        son.sayHello();
+        wife.sayHello();
+    }
+
+    public void setSon(HelloSon son) {
+        this.son = son;
+        son.setText("Son says hello!");
+    }
+
+    public void setWife(HelloWife wife) {
+        this.wife = wife;
+        wife.setText("Wife says hello!");
     }
 
     public void setMessage(String message) {

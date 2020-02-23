@@ -1,10 +1,10 @@
-package com.tutorialspoint.beans.xml;
+package com.tutorialspoint.beans.test;
 
 import lombok.Data;
 
 @Data
 public class HelloChild {
-    public String text;
+    private String text;
 
     public void sayHello() {
         System.out.println(text);
