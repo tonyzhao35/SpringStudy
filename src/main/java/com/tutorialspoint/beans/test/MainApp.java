@@ -14,19 +14,19 @@ public class MainApp {
 
 //        // Use ApplicationContext ClassPathXmlApplicationContext to load bean
 //        ApplicationContext context =
-//                new ClassPathXmlApplicationContext("Beans.test");
+//                new ClassPathXmlApplicationContext("Beans.xml");
 //        HelloWorld obj = (HelloWorld) context.getBean("helloWorld");
 //        obj.getMessage();
 //
 //        // Use XmlBeanFactory ClassPathResource to load bean
 //        XmlBeanFactory factory = new XmlBeanFactory
-//                (new ClassPathResource("Beans.test"));
+//                (new ClassPathResource("Beans.xml"));
 //        HelloWorld obj1 = (HelloWorld) factory.getBean("helloWorld");
 //        obj1.getMessage();
 
         // Use ApplicationContext FileSystemXmlApplicationContext to load bean
 //        ApplicationContext file =
-//                new FileSystemXmlApplicationContext("C:/Project/20200220/SpringStudy/web/WEB-INF/Beans.test");
+//                new FileSystemXmlApplicationContext("C:/Project/20200220/SpringStudy/web/WEB-INF/Beans.xml");
 //        HelloWorld obj2 = (HelloWorld) file.getBean("helloWorld");
 //        obj2.getMessage();
 //
