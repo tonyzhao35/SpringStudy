@@ -2,7 +2,10 @@ package com.tutorialspoint.beans.test;
 
 import com.tutorialspoint.autowired.bean.SampleBean;
 import com.tutorialspoint.autowired.common.SpringContext;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.ApplicationContext;
+import org.springframework.context.ConfigurableApplicationContext;
+import org.springframework.context.annotation.AnnotationConfigApplicationContext;
 import org.springframework.context.support.AbstractApplicationContext;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
 
@@ -36,6 +39,7 @@ public class MainApp {
         // Use ApplicationContext ClassPathXmlApplicationContext to load bean
         AbstractApplicationContext context =
                 new ClassPathXmlApplicationContext("Beans.xml");
+        context.stop();
         HelloWorld obj = (HelloWorld) context.getBean("helloWorld");
         obj.getMessage();
         obj.getOthers();
@@ -55,8 +59,15 @@ public class MainApp {
         SampleBean bean = SpringContext.getInstance().getSampleService().testSample("My first autowired App");
         System.out.println(bean.getBeantext());
 
-        SampleAnnotation sa  = (SampleAnnotation) context.getBean("sampleAnnotation");
+        SampleAnnotation sa = (SampleAnnotation) context.getBean("sampleAnnotation");
         sa.sayHello();
+
+        AnnotationConfigApplicationContext ctx = new AnnotationConfigApplicationContext(HelloWorldConfig.class);
+        HelloConfig helloConfig = ctx.getBean(HelloConfig.class);
+        helloConfig.setText("Hello Config!");
+        helloConfig.getText();
+
+        context.stop();
 
         context.registerShutdownHook();
     }

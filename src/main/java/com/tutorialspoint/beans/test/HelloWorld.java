@@ -1,5 +1,9 @@
 package com.tutorialspoint.beans.test;
 
+import javax.annotation.PostConstruct;
+import javax.annotation.PreDestroy;
+import javax.enterprise.context.Destroyed;
+
 public class HelloWorld {
     private String message;
     private String others;
@@ -44,12 +48,14 @@ public class HelloWorld {
         System.out.println("Your Others : " + others);
     }
 
+    @PostConstruct
     public void init() throws Exception {
-//        System.out.println("init bean");
+        System.out.println("init bean");
     }
 
+    @PreDestroy
     public void destroy() throws Exception {
-//        System.out.println("destroy bean");
+        System.out.println("destroy bean");
     }
 
 }

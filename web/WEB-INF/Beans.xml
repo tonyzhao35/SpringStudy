@@ -72,4 +72,13 @@
 
     <bean id="sampleAnnotation" class="com.tutorialspoint.beans.test.SampleAnnotation"/>
 
+    <bean id="helloSon2" class="com.tutorialspoint.beans.test.HelloSon">
+        <property name="text" value="helloSon2"/>
+    </bean>
+
+    <bean id="cStartEventHandler"
+          class="com.tutorialspoint.beans.test.CStartEventHandler"/>
+
+    <bean id="cStopEventHandler"
+          class="com.tutorialspoint.beans.test.CStopEventHandler"/>
 </beans>
