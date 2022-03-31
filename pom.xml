@@ -11,7 +11,7 @@
     <name>Spring</name>
 
     <properties>
-        <org.springframework.version>5.2.2.RELEASE</org.springframework.version>
+        <org.springframework.version>5.3.18</org.springframework.version>
         <org.projectlombok.version>1.18.2</org.projectlombok.version>
 
         <javax.faces.version>2.4.0</javax.faces.version>
